@@ -26,9 +26,11 @@ gem 'jbuilder', '~> 2.0'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0', group: :doc
 # use Amazon web services S3 for image storage
-gem 'aws-sdk'
+gem 'aws-sdk', '< 2.0'
 # use figaro to set environment variables
 gem 'figaro'
+# use paperclip to upload imiages to AWS
+gem 'paperclip'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
