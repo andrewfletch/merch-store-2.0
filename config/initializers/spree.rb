@@ -19,3 +19,32 @@ end
 
 Spree.user_class = "Spree::User"
 
+attachment_config = {
+
+  s3_credentials: {
+    access_key_id:     ENV['AKIAIPZAPCAVSKQLJHDA'],
+    secret_access_key: ENV['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'],
+    bucket:            ENV['escarpmentlabs']
+  },
+
+  storage:        :s3,
+  s3_headers:     { "Cache-Control" => "max-age=31557600" },
+  s3_protocol:    "https",
+  bucket:         ENV['escarpmentlabs'],
+  url:            "https://console.aws.amazon.com/s3/buckets/escarpmentlabs/?region=us-east-2&tab=overview",
+
+  styles: {
+      mini:     "48x48>",
+      small:    "100x100>",
+      product:  "240x240>",
+      large:    "600x600>"
+  },
+
+  path:           "/:class/:id/:style/:basename.:extension",
+  default_url:    "/:class/:id/:style/:basename.:extension",
+  default_style:  "product"
+}
+
+attachment_config.each do |key, value|
+  Spree::Image.attachment_definitions[:attachment][key.to_sym] = value
+end
