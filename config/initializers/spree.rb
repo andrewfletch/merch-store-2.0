@@ -22,16 +22,16 @@ Spree.user_class = "Spree::User"
 attachment_config = {
 
   s3_credentials: {
-    access_key_id:     ENV['AKIAIPZAPCAVSKQLJHDA'],
-    secret_access_key: ENV['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'],
-    bucket:            ENV['escarpmentlabs']
+    access_key_id:     ENV['AWS_ACCESS_KEY_ID'],
+    secret_access_key: ENV['AWS_SECRET_ACCESS_KEY'],
+    bucket:            ENV['S3_BUCKET_NAME']
   },
 
   storage:        :s3,
   s3_headers:     { "Cache-Control" => "max-age=31557600" },
   s3_protocol:    "https",
-  bucket:         ENV['escarpmentlabs'],
-  url:            "https://console.aws.amazon.com/s3/buckets/escarpmentlabs/?region=us-east-2&tab=overview",
+  bucket:         ENV['S3_BUCKET_NAME'],
+  url:            ":s3_domain_url",
 
   styles: {
       mini:     "48x48>",
