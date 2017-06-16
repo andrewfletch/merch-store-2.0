@@ -31,7 +31,7 @@ Spree.user_class = "Spree::User"
 #   s3_headers:     { "Cache-Control" => "max-age=31557600" },
 #   s3_protocol:    "https",
 #   bucket:         ENV['S3_BUCKET_NAME'],
-#   url:            ":http://s3.amazonaws.com/escarpmentlabs",
+#   url:            ":http://s3.amazonaws.com/esclabsmerch",
 
 #   styles: {
 #       mini:     "48x48>",
