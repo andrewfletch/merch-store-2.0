@@ -66,3 +66,4 @@ end
 gem 'spree', '~> 3.1.0.rc1'
 gem 'spree_auth_devise', '~> 3.1.0.rc1'
 gem 'spree_gateway', '~> 3.1.0.rc1'
+gem 'spree_mail_settings', github: 'spree-contrib/spree_mail_settings'
